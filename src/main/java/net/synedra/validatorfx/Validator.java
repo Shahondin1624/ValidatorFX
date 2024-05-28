@@ -19,10 +19,10 @@ import javafx.beans.value.ChangeListener;
  */
 public class Validator {
 
-    private Map<Check, ChangeListener<ValidationResult>> checks = new LinkedHashMap<>();
-    private ReadOnlyObjectWrapper<ValidationResult> validationResultProperty = new ReadOnlyObjectWrapper<>(new ValidationResult());
-    private ReadOnlyBooleanWrapper containsWarningsProperty = new ReadOnlyBooleanWrapper();
-    private ReadOnlyBooleanWrapper containsErrorsProperty = new ReadOnlyBooleanWrapper();
+    protected Map<Check, ChangeListener<ValidationResult>> checks = new LinkedHashMap<>();
+    protected ReadOnlyObjectWrapper<ValidationResult> validationResultProperty = new ReadOnlyObjectWrapper<>(new ValidationResult());
+    protected ReadOnlyBooleanWrapper containsWarningsProperty = new ReadOnlyBooleanWrapper();
+    protected ReadOnlyBooleanWrapper containsErrorsProperty = new ReadOnlyBooleanWrapper();
     
     /** Create a check that lives within this checker's domain.
      * @return A check object whose dependsOn, decorates, etc. methods can be called
